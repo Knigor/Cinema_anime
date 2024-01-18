@@ -62,9 +62,6 @@ setTimeout(() => {
 
 
 
-console.log("1111");
-
-
 
 async function fetchData() {
   let url = 'config.php';
@@ -99,7 +96,14 @@ async function fetchData() {
           </div> </a>   
         `;
       });
+
+      console.log(cardItem[1]);
+
       out.insertAdjacentHTML('afterbegin', cardItem);
+
+      let arr = [1,2,3,4];
+
+      console.log(arr[0])
 
   } catch (error) {
       console.error('Ошибка при получении данных:', error);
