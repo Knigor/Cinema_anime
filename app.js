@@ -1,9 +1,10 @@
 
+
+
 let login = document.getElementById("login");
 
 let registration = document.getElementById("registration");
 
-console.log(login)
 
 login.addEventListener("click", ()=>{
   window.location.href = '/login.html';
@@ -101,9 +102,7 @@ async function fetchData() {
 
       out.insertAdjacentHTML('afterbegin', cardItem);
 
-      let arr = [1,2,3,4];
 
-      console.log(arr[0])
 
   } catch (error) {
       console.error('Ошибка при получении данных:', error);
@@ -113,9 +112,25 @@ async function fetchData() {
 fetchData();
 
 
+// Скрываем Админ панель
 
 
+let adminView = document.getElementById("admin-panel");
+
+console.log(adminView);
+
+adminView.style.display = 'none';
 
 
+// Удаление из localStorage по ключу
+
+// console.log(localStorage.removeItem('user'));
+
+console.log(localStorage);
+
+
+if (localStorage.role == "Moderator"){
+  adminView.style.display = 'initial';
+}
 
 

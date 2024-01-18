@@ -4,6 +4,9 @@ span{
   color: #A9A9A9	;
 }
 
+p {
+  font-family: Inter;
+}
 
 a {
   text-decoration: none;
@@ -178,6 +181,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  margin-left: 5rem;
 
 }
 

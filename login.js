@@ -1,6 +1,11 @@
 let registration = document.getElementById("registration")
 let login = document.getElementById("login")
 let back = document.getElementById("back")
+let redirect = false;
+
+// Задаем время для куки
+let expirationDate = new Date();
+expirationDate.setDate(expirationDate.getDate() + 1);
 
 back.addEventListener("click", () => {
     window.location.href = '/index.html';
@@ -9,6 +14,7 @@ back.addEventListener("click", () => {
 console.log("ABOBA");
 
 // Получение данных из PHP
+
 
 async function fetchDataLogin() {
 
@@ -28,7 +34,7 @@ async function fetchDataLogin() {
             console.log("Пользовательский ввод: ", email.value);
             console.log("Пользовательский ввод: ", password.value);
 
-            let redirect = false;
+            
 
             userData.forEach(item => {
                 console.log(item.email);
@@ -37,6 +43,8 @@ async function fetchDataLogin() {
                 if (item.email == email.value && item.hash_password == password.value) {
                     console.log("YES")
                     redirect = true
+                    localStorage.setItem('user', item.name_user)
+                    localStorage.setItem('role', item.type_user)
                 } else {
                     console.log("NO")
                     redirect = false
@@ -45,6 +53,9 @@ async function fetchDataLogin() {
             });
 
             redirect ? window.location.href = '/index.html' : alert("Неправильно введен логин или пароль");
+
+
+            
 
         });
 
@@ -66,3 +77,11 @@ body.style.opacity = '0';
 setTimeout(() => {
     body.style.opacity = '1';
 }, 500);
+
+
+
+
+
+
+
+
