@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('/img/backGround-login.jpg') center/cover no-repeat;
+            /* Замените 'your-image.jpg' на путь к вашему изображению */
+            color: #fff;
+        }
+
+        .registration-container {
+            background: rgba(0, 0, 0, 0.5);
+            /* Полупрозрачный черный цвет */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-top: -16rem;
+        }
+
+        .registration-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+        }
+
+        .registration-container button,
+        .registration-container .button-style {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            background-color: transparent;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            /* Добавляем плавное изменение цвета фона при наведении и нажатии */
+        }
+
+        .registration-container button:hover,
+        .registration-container .button-style:hover {
+            background-color: #266791;
+            /* Изменяем цвет фона при наведении */
+        }
+
+        .registration-container button:active,
+        .registration-container .button-style:active {
+            background-color: #266791;
+            /* Изменяем цвет фона при нажатии */
+        }
+
+        .out_container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        body {
+            opacity: 0;
+            transition: opacity 1s ease;
+            /* Плавный переход с длительностью 1 секунда */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="registration-container">
+        <h2>Регистрация</h2>
+        <form method="post">
+            <input id="email" name="email" type="email" placeholder="Почта" required>
+            <input id="login" name="login" type="text" placeholder="Логин" required>
+            <input id="password" name="password" type="password" placeholder="Пароль" required>
+
+            <div class="out_container">
+                <button id="register" class="button-style">Зарегистрироваться</button>
+                <a id="back" class="button-style">Назад</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+<script>
+    let back = document.getElementById("back");
+
+    back.addEventListener("click", () => {
+        window.location.href = '/index.html';
+    });
+
+    console.log("ABOBA");
+
+    let body = document.querySelector("body");
+
+    console.log(body);
+
+    
+    body.style.opacity = '0';
+
+    setTimeout(() => {
+        body.style.opacity = '1';
+    }, 500);
+
+
+</script>
+
+</html>
