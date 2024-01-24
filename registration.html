@@ -73,21 +73,22 @@
         body {
             opacity: 0;
             transition: opacity 1s ease;
-            /* Плавный переход с длительностью 1 секунда */
+            
         }
+
     </style>
 </head>
 
 <body>
     <div class="registration-container">
         <h2>Регистрация</h2>
-        <form method="post">
+        <form action="register.php" method="post">
             <input id="email" name="email" type="email" placeholder="Почта" required>
             <input id="login" name="login" type="text" placeholder="Логин" required>
             <input id="password" name="password" type="password" placeholder="Пароль" required>
-
+    
             <div class="out_container">
-                <button id="register" class="button-style">Зарегистрироваться</button>
+                <button type="submit" class="button-style">Зарегистрироваться</button>
                 <a id="back" class="button-style">Назад</a>
             </div>
         </form>

@@ -5,6 +5,8 @@ let login = document.getElementById("login");
 
 let registration = document.getElementById("registration");
 
+let outLogin = document.getElementById("out-login")
+
 
 login.addEventListener("click", ()=>{
   window.location.href = '/login.html';
@@ -13,6 +15,13 @@ login.addEventListener("click", ()=>{
 registration.addEventListener("click", ()=>{
   window.location.href = '/registration.html';
 })
+
+outLogin.addEventListener("click", () =>{
+  localStorage.clear();
+  window.location.href = '/';
+})
+
+
 
 
 
@@ -91,6 +100,7 @@ async function fetchData() {
                   <div class="">Директор студии:<span> ${menu.director}</span></div>
                 </div>
               </div>
+              <div class="card-rating">7.5</div>
 
               <p class="card-text"><span>${menu.discription_plot.slice(0, 80)}...</span></p>
             </div>
@@ -115,18 +125,21 @@ fetchData();
 // Скрываем Админ панель
 
 
+outLogin.style.display = 'none';
+
+if (localStorage.length >= 1){
+  outLogin.style.display = 'initial';
+}
+
+
+
+console.log(localStorage);
+
 let adminView = document.getElementById("admin-panel");
 
 console.log(adminView);
 
 adminView.style.display = 'none';
-
-
-// Удаление из localStorage по ключу
-
-// console.log(localStorage.removeItem('user'));
-
-console.log(localStorage);
 
 
 if (localStorage.role == "Moderator"){

@@ -11,7 +11,8 @@ try {
     $conn->exec("SET NAMES UTF8");
 
     $sql = "SELECT * 
-            from anime";
+            from rating_anime
+            order by rating desc";
     $result = $conn->query($sql);
 
     

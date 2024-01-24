@@ -1,0 +1,19 @@
+
+JSON decoding error: Syntax error
+
+{"name":"Игорек","lastName":"Кретов"}
+
+JSON decoding error: Syntax error
+
+JSON decoding error: Syntax error
+{"name":"Игорек","lastName":"Кретов"}
+{"name":"Игорек","lastName":"Кретов"}
+{"name":"dasd","lastName":"zzz"}
+
+JSON decoding error: Syntax error
+
+JSON decoding error: Syntax error
+{"name":"dasd","lastName":"zzz"}
+{"name":"dasd","lastName":"zzz"}
+
+JSON decoding error: Syntax error

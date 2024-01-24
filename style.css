@@ -251,6 +251,18 @@ footer,
   transition: opacity 1s ease; /* Плавный переход с длительностью 1 секунда */
 }
 
+
+.out-login{
+  display: flex;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.5rem;
+  border: 1px solid #dedede;
+  cursor: pointer;
+}
+
 .login {
   display: flex;
   padding: 0.5rem 1rem;
