@@ -45,18 +45,21 @@ async function fetchDataLogin() {
                     redirect = true
                     localStorage.setItem('user', item.name_user)
                     localStorage.setItem('role', item.type_user)
+                    localStorage.setItem('email', item.email)
                     
-                    redirect ? window.location.href = '/index.html' : alert("Неправильно введен логин или пароль");
+                    window.location.href = '/index.html'
 
                 } else {
                     console.log("NO")
-                    redirect = false
                 }
 
             });
 
-        
-            redirect = false;
+            if (redirect == false){
+                alert("Введен неверный логин или пароль");
+            }
+
+            
             
 
         });

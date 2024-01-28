@@ -36,7 +36,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $stmt->execute();
 
-        echo json_encode(['success' => 'Data inserted successfully']);
+        header("Location: index.html");
+        exit();
+
+        echo json_encode(['success' => 'Данные успешно занесены в таблицу']);
     } catch (PDOException $e) {
         echo json_encode(['error' => $e->getMessage()]);
     }

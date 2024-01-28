@@ -68,6 +68,9 @@ setTimeout(() => {
 
 
 
+
+
+
 // Подключение к PHP конфигу FETCH
 
 
@@ -75,6 +78,7 @@ setTimeout(() => {
 
 async function fetchData() {
   let url = 'config.php';
+
   
   try {
       let response = await fetch(url, { mode: 'cors' });
@@ -83,11 +87,11 @@ async function fetchData() {
       let cardItem = '';
 
       let out = document.getElementById('out');
-      menuItem.slice(0,12).forEach((menu) => {
+      menuItem.forEach((menu) => {
         
         cardItem +=
         `
-        <a href=""#>  <div class="card">
+        <a href="page.html?id=${menu.id}">  <div class="card">
           <img class="card-img-top" src="/images/${menu.images}">  
             <div class="card-body">
               <h4 class="card-title">${menu.title_anime}</h4>
@@ -100,15 +104,14 @@ async function fetchData() {
                   <div class="">Директор студии:<span> ${menu.director}</span></div>
                 </div>
               </div>
-              <div class="card-rating">7.5</div>
+             
 
-              <p class="card-text"><span>${menu.discription_plot.slice(0, 80)}...</span></p>
+              <p class="card-text"><span>${menu.discription_plot}</span></p>
             </div>
           </div> </a>   
         `;
       });
 
-      console.log(cardItem[1]);
 
       out.insertAdjacentHTML('afterbegin', cardItem);
 

@@ -6,6 +6,7 @@ $username = 'postgres';
 $password = '123';
 
 try {
+    
     $conn = new PDO("pgsql:host=$host;port=$port;dbname=$dbname;user=$username;password=$password");
     
     $conn->exec("SET NAMES UTF8");
@@ -16,6 +17,10 @@ try {
 
     
     echo json_encode($result->fetchAll(PDO::FETCH_ASSOC));
+
+
+    
+
 
 
 

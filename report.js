@@ -68,6 +68,12 @@ generate.addEventListener("click", (event) => {
 
     console.log(sortedRating);
 
+    localStorage.setItem("averageRating", sortRating);
+
+
+    console.log(localStorage);
+
+
 
     for (const [anime, rating] of Object.entries(sortedRating)) {
         
@@ -84,10 +90,10 @@ generate.addEventListener("click", (event) => {
     
 
 
-
-
-
   }
 
   f1();
 });
+
+
+

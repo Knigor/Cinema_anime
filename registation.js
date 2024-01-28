@@ -27,34 +27,3 @@ function convertDate(date) {
 }
 
 
-// async function f2(){
-
-//   let formData = {
-//     email: 'test@mail.ru',
-//     password: '123456'
-//   }
-
-
-//   const res = await fetch ("register.php", {
-//     method: "POST",
-//     body: formData
-//   })
-
-//   console.log(formData);
-//   console.log(res)
-
-//   if(!res.ok){
-//     console.log(res.status);
-//   }
-
-//    let output = await res.json();
-
-//    console.log(output);
-
-//    return(output);
-   
-
-// }
-
-
-// f2();

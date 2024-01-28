@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+    <link rel="stylesheet" href="page.scss">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header-main-block">
+
+            <a href="/index.html">
+                <div class="header-back">
+                    <img class="back-img" src="img/back.svg">
+                    <p class="back-text">Назад</p>
+                </div>
+            </a>
+
+
+
+            <div id="out" class="header-main-block-img">
+            </div>
+
+            <div class="rating-header">
+
+                <span class="rating"></span>
+                <form action="pagePHP.php" method="post" id="myForm">
+                    <input type="hidden" name="star-value" id="star-value" value="8">
+                    <input type="hidden" name="email-value" id="email-value" value="dsada@mail.ru">
+                    <input type="hidden" name="titleAnime-value" id="titleAnime-value" value="Реинкарнация">
+                    <input type="hidden" name="year-release" id="year-release" value="2023">
+                    <input type="hidden" name="PageID" id="PageID" value="15">
+                    <input id="starPOST" type="submit" class="view-text1"></input>
+                </form>
+
+                <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;"></iframe>
+
+
+            </div>
+
+
+
+        </div>
+    </header>
+
+
+    <main>
+        <div class="footer-main-block">
+
+
+            <div id="review-container">
+                <form action="reviewConf.php" method="post" id="review-form">
+                    <input type="hidden" name="year-release" id="year-release1" value="2023">
+                    <input type="hidden" name="titleAnime-value" id="titleAnime-value1" value="Реинкарнация">
+                    <input type="hidden" name="email-value" id="email-value1" value="dsada@mail.ru">
+                    <input type="hidden" name="PageID" id="PageID1" value="15">
+                    <textarea name="review-text" id="review-text" placeholder="Напишите свой отзыв..."></textarea>
+                    <button id="putReview" type="submit">Отправить отзыв</button>
+                </form>
+
+            </div>
+
+            <div class="footer-reviews-block">
+                <p>Отзывы</p>
+            </div>
+
+            <div id="out-reviews" class="out-reviews">
+
+            </div>
+
+
+
+        </div>
+    </main>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="page.js"></script>
+
+</html>
